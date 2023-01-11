@@ -1,155 +1,55 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Project Title</title>
-<meta charset="utf-8">
-<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-<style> @-ms-viewport { width: device-width; } </style>
-<link rel="stylesheet" href="vendor/reset.min.css">
-<link rel="stylesheet" href="groundview.css">
-</head>
-<body class="multiple-scenes ">
+<html class="gv-page" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>GroundView - Plane Crazy Maps</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="img/logo_Web.png">
 
-<div id="pano"></div>
-
-<div id="sceneList">
-  <ul class="scenes">
-    
-      <a href="javascript:void(0)" class="scene" data-id="0-build_site_1_dec_2022">
-        <li class="text">Build_Site_1_DEC_2022</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="1-build_site_2_dec_2022">
-        <li class="text">Build_Site_2_DEC_2022</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="2-build_site_3_dec_2022">
-        <li class="text">Build_Site_3_DEC_2022</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="3-build_site_4_dec_2022">
-        <li class="text">Build_Site_4_DEC_2022</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="4-build_site_5_dec_2022">
-        <li class="text">Build_Site_5_DEC_2022</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="5-build_site_6_dec_2022">
-        <li class="text">Build_Site_6_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="6-build_site_7_dec_2022">
-        <li class="text">Build_Site_7_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="7-build_site_8_dec_2022">
-        <li class="text">Build_Site_8_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="8-build_site_9_dec_2022">
-        <li class="text">Build_Site_9_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="9-build_site_10_dec_2022">
-        <li class="text">Build_Site_10_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="10-build_site_11_dec_2022">
-        <li class="text">Build_Site_11_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="11-build_site_12_dec_2022">
-        <li class="text">Build_Site_12_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="12-build_site_13_dec_2022">
-        <li class="text">Build_Site_13_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="13-build_site_14_dec_2022">
-        <li class="text">Build_Site_14_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="14-build_site_15_dec_2022">
-        <li class="text">Build_Site_15_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="15-build_site_16_dec_2022">
-        <li class="text">Build_Site_16_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="16-build_site_17_dec_2022">
-        <li class="text">Build_Site_17_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="17-build_site_18_dec_2022">
-        <li class="text">Build_Site_18_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="18-build_site_19_dec_2022"> 
-        <li class="text">Build_Site_19_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="19-build_site_20_dec_2022">
-        <li class="text">Build_Site_20_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="20-build_site_21_dec_2022">
-        <li class="text">Build_Site_21_DEC_2022</li>
-      </a>
-
-      <a href="javascript:void(0)" class="scene" data-id="21-build_site_22_dec_2022">
-        <li class="text">Build_Site_22_DEC_2022</li>
-      </a>
-    
-  </ul>
-</div>
-
-<div id="titleBar">    
-  <h1 class="sceneName"></h1>
-</div>
-
-<a href="javascript:void(0)" id="autorotateToggle">
-  <img class="icon off" src="img/play.png">
-  <img class="icon on" src="img/pause.png">
-</a>
-
-<a href="javascript:void(0)" id="fullscreenToggle">
-  <img class="icon off" src="img/fullscreen.png">
-  <img class="icon on" src="img/windowed.png">
-</a>
-
-<a href="javascript:void(0)" id="sceneListToggle">
-  <img class="icon off" src="img/expand.png">
-  <img class="icon on" src="img/collapse.png">
-</a>
-
-<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
-  <img class="icon" src="img/up.png">
-</a>
-<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
-  <img class="icon" src="img/down.png">
-</a>
-<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
-  <img class="icon" src="img/left.png">
-</a>
-<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
-  <img class="icon" src="img/right.png">
-</a>
-<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
-  <img class="icon" src="img/plus.png">
-</a>
-<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
-  <img class="icon" src="img/minus.png">
-</a>
-
-<script src="vendor/screenfull.min.js" ></script>
-<script src="vendor/bowser.min.js" ></script>
-<script src="vendor/marzipano.js" ></script>
-
-<script src="data.js"></script>
-<script src="groundview.js"></script>
-
-</body>
+    </head>
+    <body>
+        <nav>
+            <img class="nav-logo" src="img/logo_Web.png" draggable="false">
+            <img class="text-logo" src="img/text_Web.png" draggable="false">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a class ="active"href="#">GroundView</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Donate</a></li>
+            </ul>
+        </nav>
+        <div class="vid-container">
+            <video id="gv-preview" loop autoplay src="PCM_gvpgpv.mp4"></video>
+        </div>
+        <ul class="gv-frame">
+            <h1 class="gv-title">Official Ground View</h1>
+                <li class="gv-dec-2022">
+                    <h2 class="gv-dec2022-title">Dec 2022</h2>
+                    <img class="gv-dec-2022-car" src="img/dec-2022-car.png" draggable="false">
+                    <button type="button"class="gv-dec-2022-btn" onclick="location.href='groundviewdec2022.html'">View!</button>
+                </li>
+                <li class="gv-jan-2023">
+                    <h2 class="gv-jan2023-title">Jan 2023</h2>
+                    <img class="gv-jan-2023-car" src="img/jan-2023-car.png" draggable="false">
+                    <button type="button"class="gv-jan-2023-btn" onclick="">Coming Soon!</button>
+                </li>
+                <li class="gv-jan-2023">
+                    <h2 class="gv-jan2023-title">? ? ?</h2>
+                    <img class="gv-jan-2023-car" src="img/tbd_car.png" draggable="false">
+                    <button type="button"class="gv-jan-2023-btn" onclick="">Coming Soon!</button>
+                </li>
+                <li class="gv-jan-2023">
+                    <h2 class="gv-jan2023-title">? ? ?</h2>
+                    <img class="gv-jan-2023-car" src="img/tbd_car.png" draggable="false">
+                    <button type="button"class="gv-jan-2023-btn" onclick="">Coming Soon!</button>
+                </li>
+            </ul>
+            <div class="bottom-frame">
+                <img class="bottom-frame-img" src="img/logo_Web_Med.png" draggable="false">
+                <h3 class="bottom-frame-txt">© 2023 Plane Crazy Maps | Hosting by Github Pages</h3>
+            </div>
+    </body>
 </html>

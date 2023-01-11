@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Maps - Plane Crazy Maps</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="img/logo_Web.png">
+        <script>
+            function changeMapOriginal() {
+                var img = document.getElementById("pc1-map-img");
+                img.src="img/pc1_sat_map.jpg";
+                return false;
+            }
+            function changeMapNight() {
+                var img = document.getElementById("pc1-map-img");
+                img.src="img/pc1_night_map.png";
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <nav>
+            <img class="nav-logo" src="img/logo_Web.png">
+            <img class="text-logo" src="img/text_Web.png">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class ="active" href="#">Maps</a></li>
+                <li><a href="groundview.html">GroundView</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Donate</a></li>
+            </ul>
+        </nav>
+        <ul class="map-selection">
+            <li><button type="button" class="original-map-btn" onclick="changeMapOriginal()">
+                Original
+                </button>
+            </li>
+            <li><button type="button" class="layout-map-btn">
+                Layout
+                </button>
+            </li>
+            <li><button type="button" class="topography-map-btn">
+                (Coming Soon)
+                </button>
+            </li>
+            <li><button type="button" class="night-map-btn" onclick="changeMapNight()" >
+                Night
+                </button>
+            </li>
+        </ul>
+        <div class="pc1-map-container">
+            <img id="pc1-map-img" src="img/pc1_sat_map.jpg" draggable="false">
+        </div>
+        <div class="bottom-frame">
+            <img class="bottom-frame-img" src="img/logo_Web_Med.png" draggable="false">
+            <h3 class="bottom-frame-txt">© 2023 Plane Crazy Maps | Hosting by Github Pages</h3>
+        </div>
+    </body>
+</html>
